@@ -5,7 +5,7 @@ import { CancelNotification } from "./cancel-notification";
 
 
 describe("Cancel notification", () => {
-  it("should to be able to send a notification", async () => {
+  it("should to be able to cancel a notification", async () => {
     const notificationRepository = new InMemoryNotificationsRepository();
     const cancelNotification = new CancelNotification(notificationRepository);
 
@@ -24,8 +24,6 @@ describe("Cancel notification", () => {
     expect(notificationRepository.notifications[0].canceledAt).toEqual(
       expect.any(Date)
     );
-
-    //35min
 
   })
 })
